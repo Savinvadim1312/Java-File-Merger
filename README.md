@@ -12,6 +12,15 @@ This is how you can merge multiple `java | kotlin` files into one file. This is 
    2) File type = Any (or Kotlin) | scope = "Project Files" | program = path-to-root-project/file-merger.sh | arguments=$Sourcepath$ kt
 7) Apply
 
+### Steps 1 & 2 as oneliner
+Copy & paste either of the following to download and make executable.
+```bash
+wget https://raw.githubusercontent.com/Savinvadim1312/Java-File-Merger/master/file-merger.sh && chmod +x file-merger.sh
+```
+-- or --
+```bash
+curl https://raw.githubusercontent.com/Savinvadim1312/Java-File-Merger/master/file-merger.sh -o file-merger.sh && chmod +x file-merger.sh
+```
 
 # Troubleshooting
 - Make sure output folder exists (root-project/out)
@@ -23,7 +32,8 @@ This is how you can merge multiple `java | kotlin` files into one file. This is 
 # Misc
 This script will search for all files of specified type under any number of folders from `root-project/src/**` ignoring files under `root-project/src/test/**`.
 It also strips ou package declarations.
-For java classes you have to manually remove the `public` keyword from them as only one class may have that when declaring multiple classes on the same file.
+
+FIXED ~~For java classes you have to manually remove the `public` keyword from them as only one class may have that when declaring multiple classes on the same file.~~
 
 # TODO
-- [ ] Strip `public` keyword automatically
+- [x] Strip `public` keyword automatically
